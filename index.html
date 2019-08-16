@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>blueCall</title>
+</head>
+<body>
+
+<script src="https://gnjo.github.io/deth.js"></script>
+<script src="https://gnjo.github.io/e3.js"></script> 
+<script src="https://gnjo.github.io/use.js"></script>
+<script src="https://gnjo.github.io/imgc.js"></script> 
+<link rel="stylesheet" href="blueCall.css">
+<link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Share+Tech+Mono'>
+
+ <script src="drop.js"></script> 
+
+ 
+<template id="codeframe"> 
+<output class="codeframe" name="coding">
+<div class="blueCall"
+     onpaste ="_dnd(event)" 
+     ondragover="_dnd(event)" 
+     ondrop="_dnd(event)" 
+     ondragleave="_dnd(event)" tabindex="-1"></div>
+<h1>001</h1>
+<pre contenteditable="plaintext-only" onkeydown="edKeydown(event)">
+body{
+ width:100vw;height:100vh;
+ color:white;
+} 
+</pre>
+<code contenteditable="plaintext-only" onkeydown="edKeydown(event)">
+body{
+ width:100vw;height:100vh;
+ color:white;
+}
+body {
+    color: #bbcde0;
+    color: #bbcde055;
+    background-image: #050608;
+    background: #07090b;
+    border: 1px solid #035d77;
+}
+</code>
+<div class="ctrl" onclick="ctrl(event)">
+ <label>[DEL]</label>
+ <label>[ADD]</label>
+ <label>[LST]</label>
+ <label>[IMG]</label> 
+ <label>[STT]</label> 
+</div>
+</output>
+</template> 
+ 
+ 
+<!--------> 
+<script src="cmdMap.js"></script>
+<script src="editer.js"></script> 
+ 
+</body>
+</html>

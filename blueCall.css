@@ -1,0 +1,108 @@
+.blueCall,.bluecall {
+ content: ' ';
+ background-image: url(https://i.imgur.com/cpIn0ww.png), radial-gradient(#00cccc, #101010), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.3) 2.5px, transparent 5px);
+ height: 20rem;
+ background-size: cover;
+ background-position: center 10%;
+ background-blend-mode: soft-light;
+}
+
+/**/
+::-webkit-scrollbar{overflow:hidden;width:4px;background:black}
+::-webkit-scrollbar:horizontal{height:4px;}
+::-webkit-scrollbar-button{display:none;}
+::-webkit-scrollbar-piece{background:rgba(100,100,100,0.3);}
+::-webkit-scrollbar-piece:start{background:rgba(100,100,100,0.3);}
+::-webkit-scrollbar-thumb{background:hsla(180, 100%, 40%, 0.3)}
+::-webkit-scrollbar-corner{background:rgba(100,100,100,0.3);}
+
+::selection {
+ background: #00cccc;
+ color: white;
+}
+/************/
+/**/
+
+
+*{
+ font-family:'share tech mono',monospace;
+ outline:none;
+}
+body{
+ width:42rem;
+ color:hsla(180, 100%, 40%, 1);
+ background: black; 
+ font-size:1rem;
+}
+body {
+ //border: 1px solid #035d77;
+ margin:4rem auto;
+}
+
+h1,pre,code,label{
+ display:block;
+ white-space:pre;
+ word-break:break-all;
+ background:hsl(180, 50%, 1%);
+ box-sizing:border-box;
+ margin:0;padding:0;
+ border-bottom:2px solid black;
+ padding:0.5rem 0;
+ line-height:1.2;
+}
+
+
+h1{font-size:1.6rem;font-weight:400}
+code{
+}
+pre{
+ color: #bbcde077;
+ border-left:2px solid hsla(180, 100%, 40%, 1); 
+ font-size:0.75rem;
+ padding-left:1rem;
+}
+[contenteditable]{
+ outline:none;
+}
+
+.ctrl{
+ color: #bbcde077;
+ font-size:0.75rem;
+ display:flex;flex-direction:row;width:100%;
+ justify-content:space-around;
+ opacity:0;
+ transition:opacity 0.3s linear,color 0.3s linear;
+}
+.ctrl:hover{opacity:1;}
+.ctrl>*{flex-grow:1;text-align:center;
+ border-left:2px solid black;
+ user-select:none!important;
+}
+.ctrl > *:nth-child(1) {
+    border-left: 0px solid;
+}
+.ctrl>*:hover{color:hsla(180, 100%, 40%, 1)}
+
+.codeframe{
+ display:block;
+ position:relative;
+}
+.codeframe[name]::before {
+    content: attr(name);
+    text-align: right;
+    right: 0;
+    top: 0;
+    position: absolute;
+    font-size:0.75rem;
+ 
+}
+
+.codeframe[name="coding"]::before{
+ color:orange;
+}
+.codeframe[name="coding"] .ctrl>*:hover{
+ color:orange;
+}
+.codeframe[name="coding"] pre{
+ border-left:2px solid orange;
+}
